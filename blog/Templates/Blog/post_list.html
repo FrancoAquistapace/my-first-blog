@@ -15,13 +15,13 @@
         <p>
         	<em>It works!!!</em>
         </p>	
-		</div>
-
-		<br />
-		<div>
-			<p>Anyways, I just wanted to know how this thing worked</p>
-			<a href="">My first post</a>
-		</div>
+		{% for post in posts %}
+        	<div>
+            	<p>published: {{ post.published_date }}</p>
+            	<h1><a href="">{{ post.title }}</a></h1>
+        	    <p>{{ post.text|linebreaksbr }}</p>
+        	</div>
+    	{% endfor %}
 		
 	</body>	
 	
